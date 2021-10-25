@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áo thun basic trơn nam đẹp Man Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        :root{
+            --maincolor: #1C7947;
+            --navmenuheight: 65px;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            background:cornsilk;
+        }
+        body{
+            width: 1182px;
+            margin: 0 auto;
+        }
+        #navbar{
+            height: var(--navmenuheight);
+            background-color: var(--maincolor);
+        }
+        #navbar .logo{
+            float: left;
+            height: 65px ;
+            width: 210px;
+            display: block;
+        }
+        #navbar .logo a{
+            height: 30px;
+            width: 180px;
+            margin: 15px 30px;
+            float: left;
+            display: block;
+        }
+        #navbar .logo a img{
+            height: 100%;
+            width: 100%;
+        }
+        #navbar .search{
+            float: left;
+            width: 270px;
+            height: 33px;
+            background:cornsilk;
+            border-radius: 13px;
+            margin-left: 50px;
+            margin-top: 15px;
+        }
+        #navbar .search input{
+            font-weight: bold;
+            font-size: 13px;
+            background: none;
+            color: black;
+            margin-left: 10px;
+            margin-top: 8px;
+            border:none;
+            float: left;
+            width: 85%;
+            height: 50%;
+            display: block;
+        }
+        #navbar .search input:focus{
+            outline: none;
+        }
+        #navbar .search>a{
+            color:black;
+            font-size: 1.2rem;
+            display: block;
+            float: left;
+            margin-top: 6px;
+            text-decoration: none;
+            margin-left: 6px;
+        }
+        #navbar .box{
+            float: left;
+            width: 630px;
+            margin-left: 20px;
+            margin-top: 12px;
+            height: 42px;
+        }
+        #navbar .box>a{
+            
+            text-decoration: none;
+            position: relative;
+            height: 40px;
+            margin-left: 25px;
+            border-radius: 10px;
+        }
+        #navbar .box .box1{
+            float: left;
+            padding: 5px 5px;
+            align-items: center;
+            display: flex;
+        }
+        #navbar .box .box1:hover{
+            background:rgb(255, 255, 255, 0.1)
+        }
+        #navbar .box .box1 img{
+            width: 27px;
+            height: 27px;
+            float: left;
+            display: block;
+            margin-top: 3px;
+        }
+        #navbar .box .box1 .content1{
+            float: left;
+            color:white;
+            margin-left: 5px;
+            font-size: 13px;
+            line-height: 1.2;
+        }
+        #navbar .box .box1 .content1>p>strong{
+            font-size: 1rem;
+        }
+        #navbar .box .box2{
+            float: left;
+            padding: 5px;
+            align-items: center;
+            display: flex;
+        }
+        #navbar .box .box2:hover{
+            background:rgb(255, 255, 255, 0.1);
+        }
+        #navbar .box .box2 img{
+            width: 27px;
+            height: 27px;
+            float: left;
+            display: block;
+        }
+        #navbar .box .box2 .content2{
+            float: left;
+            color:white;
+            margin-left: 5px;
+            font-size: 13px;
+            line-height: 15px;
+        }
+        #navbar .box .box3{
+            float: left;
+            padding: 5px 5px;
+            align-items: center;
+            display: flex;
+        }
+        #navbar .box .box3:hover{
+            background:rgb(255, 255, 255, 0.1);
+        }
+        #navbar .box .box3 img{
+            width: 30px;
+            height: 30px;
+            float: left;
+        }
+        #navbar .box .box3 .content3{
+            float: left;
+            color:white;
+            margin-left: 5px;
+            font-size: 13px;
+        }
+        #navbar .box .box4{
+            float: left;
+            padding: 5px 5px;
+            align-items: center;
+            display: flex;
+        }
+        #navbar .box .box4:hover{
+            background:rgb(255, 255, 255, 0.1);
+        }
+        #navbar .box .box4 img{
+            width: 30px;
+            height: 30px;
+            float: left;
+        }
+        #navbar .box .box4 .content4{
+            float: left;
+            color:white;
+            margin-left: 5px;
+            font-size: 13px;
+            
+        }
+        #navbar .box .box5{
+            float: left;
+            text-align: center;
+            background:rgb(255, 255, 255, 0.1) ;
+            color: white;
+            font-size: 13px;
+            padding: 0 5px;
+            margin-right: 1px;
+        }
+        #navbar .box .box5 img{
+            width: 20px;
+            height: 20px;
+            padding-top: 2px;
+        }
+        #navmenu{
+            height: 30px;
+            width: 100%;
+            padding-left: 30px;
+            line-height: 30px;
+            margin-top: 20px;
+        }
+        #navmenu>ul{
+            list-style-type: none;
+            line-height: 30px;
+            height: 30px;
+        }
+        #navmenu>ul>li>a{
+            text-decoration: none;
+            color: black;
+            float: left;
+        }
+        #navmenu>ul>li>a>i{
+            margin: 0 10px;
+        }
+        #content{
+            width: 100%;
+            float: left;
+            margin: 20px 0 5px;
+            padding: 10px 40px 20px;
+            background: white;
+        }
+        #content .left {
+            margin-right: 10px;
+            width: 500px;
+            float: left;
+        }
+        #content .left a img{
+            width: 500px;
+            height: 500px;
+        }
+        #content .right{
+            padding: 0px 30px;
+            float: left;
+        }
+        #content .right .name{
+            margin-bottom: 10px;
+            font-size: 13px;
+            font-weight: bold;
+            float: left;
+        }
+        #content .right .star{
+            margin-left: 10px;
+        }
+        .checked{
+            color: orange;
+        }
+        #content .right .price{
+            margin: 10px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        #content .right .detail{
+            margin:  10px;
+            display: block;
+        }
+        #content .right .detail .color{
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+        }
+        #content .right .detail .color>span{
+            margin-right: 87px;
+        }
+        .dot {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            margin: 4px 2px;
+            display: inline-block;
+        }
+        .dot:hover{
+            transform: scale(1.1);
+        }
+        .dot1{
+            background: black;
+        }
+        .dot2{
+            background: var(--maincolor);
+        }
+        .dot3{
+            background: orange;
+        }
+        .dot4{
+            background: yellow;
+        }
+        #content .right .detail .size{
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 10px;
+            align-items: center;
+        }
+        #content .right .detail .size>span{
+            margin-right: 50px;
+        }
+        #content .right .detail .size .button{
+            background-color: var(--maincolor);
+            width: 30px;
+            height: 30px;
+            border: none;
+            color: white;
+            line-height: 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+        }
+        #content .right .detail .size .button:hover{
+            transform: scale(1.1);
+        }
+        #content .right .detail .size .table{
+            display: block;
+            text-decoration: none;
+            color: var(--maincolor);
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        #content .right .SL{
+            height: 30px;
+            font-size: 15px;
+            font-weight: bold;
+            align-items: center;
+            margin: 10px;
+        }
+        #content .right .SL>span{
+            margin-right: 60px;
+        }
+        #content .right .SL .but{
+            width: 30px;
+            height: 30px;
+            color: white;
+            background: var(--maincolor);
+            border: none;
+            cursor: pointer;
+            
+        }
+        #content .right .SL>input{
+            width: 100px;
+            height: 30px;
+            text-align: center;
+        }
+        #content .right .thanh-toan{
+            text-align: center;
+            margin-top: 30px;
+        }
+        #content .right .thanh-toan .pay{
+            background-color: var(--maincolor);
+            width: 150px;
+            height: 40px;
+            border: none;
+            color: white;
+            line-height: 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+        }
+        #content .right .thanh-toan .pay:hover{
+            background-color: black;
+        }
+        #content .right .product-des{
+            width: 300px;
+            font-size: 11px;
+            margin-top: 10px;
+            position: relative;
+        }
+        #content .right .product-des>h2{
+            padding: 5px 0;
+            border-bottom: 1px solid black;
+        }
+        #content .right .product-des>h2 .fa{
+            text-decoration: none;
+            color: black;
+            right: 10px;
+            position:absolute;
+        }
+        #HTCH{
+            width: 1182px;
+            height: 300px;
+            float: left;
+            background-color: green;
+            margin: 10px 0 20px;
+            position: relative;
+            display:flex;
+            justify-content: center;
+        }
+        #HTCH img{
+            width: 1182px;
+            height: 100%;
+        }
+        #HTCH div{
+            position: absolute;
+            bottom: 150px;
+            border: 1px solid;
+            padding: 10px;
+            background: #474642;
+        }
+        #HTCH div:hover{
+            background: black;
+        }
+        #HTCH div a{
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #footer {
+            background-color: var(--maincolor);
+            float: left;
+            width: 100%;
+        }
+        #footer .left-footer{
+            margin: 10px 30px;
+            color: white;
+            float: left;
+        }
+        #footer .left-footer .line1{
+            margin: 10px 0;
+            display: inline-block;
+        }
+        #footer .left-footer .fa{
+            font-size: 1.3rem;
+            display: block;
+        }
+        #footer .left-footer .line1>ul{
+            list-style-type: none;
+            font-size: 15px;
+            margin-left: 10px;
+            display: inline-block;
+        }
+        #footer .left-footer .line2{
+            margin-bottom: 10px;
+        }
+        #footer .left-footer .line2>p{
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 15px;
+            justify-content: space-between;
+        }
+        #footer .middle-footer{
+            float: left;
+            color:white;
+            margin: 10px 15px;
+            margin-left: 180px;
+        }
+        #footer .middle-footer .line1{
+            margin: 10px 0;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #footer .middle-footer .line2>ul{
+            list-style-type: none;
+            font-size: 15px;
+        }
+        #footer .middle-footer .line2>ul>a{
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+        #footer .right-footer{
+            margin: 10px 15px;
+            color: white;
+            float: left;;
+            margin-left: 180px;
+        }
+        #footer .right-footer .line1{
+            margin: 10px 0;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #footer .right-footer .line2{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+            margin-bottom:10px;
+        }
+        #footer .right-footer .line2 a{
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+        #footer .right-footer .line3{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+            margin-bottom:10px;
+        }
+        #footer .right-footer .line3 a{
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div class="logo">
+            <a href=""><img src="./MH.png" alt=""></a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Bạn cần tìm gì?">
+            <a href="" class="fa fa-search"></a>
+        </div>
+        <div class="box">
+            <a class="box1" href="">
+                <img src="./Phone.png" alt="">
+                <div class="content1">
+                    <p>
+                        Gọi mua hàng
+                    <br>
+                    <strong>1800.1234</strong>
+                    </p>
+                </div>
+            </a>
+            <a href="" class="box2">
+                <img src="./place.png" alt="">
+                <div class="content2">
+                    <p>
+                        Cửa hàng
+                        <br>
+                        gần bạn
+                    </p>
+                </div>
+            </a>
+            <a href="" class="box3">
+                <img src="./deliver.png" alt="">
+                <div class="content3">
+                    <p>
+                        Tra cứu
+                        <br>
+                        đơn hàng
+                    </p>
+                </div>
+            </a>
+            <a href="" class="box4">
+                <img src="./giỏ hàng.png" alt="">
+                <div class="content4">
+                    <p>
+                        Giỏ
+                        <br>
+                        hàng
+                    </p>
+                </div>
+            </a>
+            <a href="" class="box5">
+                <img src="./user.png" alt="">
+                <p>Tài khoản</p>
+            </a>
+        </div>
+    </div>
+    <div id="navmenu">
+        <ul>
+            <li>
+                <a href="http://127.0.0.1:5500/CLOTHES%20STORE/ManStore.HTML">
+                    <span class="fa fa-home"></span>
+                    <span>Trang chủ</span>
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>Áo nam</span>
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>Áo thun</span>
+                    <i class="fa fa-chevron-right"></i>
+               </a>
+            </li>
+            <li>
+               <span>Áo thun basic trơn nam đẹp Man Store</span>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+        <div class="left">
+            <a href=""><img src="./ao-thun.jpg" alt=""></a>
+        </div>
+        <div class="right">
+            <div class="name">
+                <h1>Áo thun basic trơn nam đẹp Man Store</h1>
+            </div>
+            <div class="star">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span>Đã bán 1k</span>
+            </div>
+            <div class="price"> 350,000đ</div>
+            <div class="detail">
+                <div class="color">
+                    <span>Màu sắc</span>
+                        <a href=""class="dot dot1"></a>
+                        <a href=""class="dot dot2"></a>
+                        <a href=""class="dot dot3"></a>
+                        <a href=""class="dot dot4"></a>
+                </div>
+                <div class="size">
+                    <span>KÍCH THƯỚC</span>
+                    <a href="" class="button button1">S</a>
+                    <a href="" class="button button2">M</a>
+                    <a href="" class="button button3">L</a>
+                    <a href="" class="button button4">XL</a>
+                    <a href="" class="table">Bảng quy đổi kích cỡ
+                        <i class="fa fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="SL">
+                <span>SỐ LƯỢNG</span>
+                <button class=" but but1">-</button>
+                <input type="number" placeholder="1">
+                <button class="but but2">+</button>
+            </div>
+            <div class="thanh-toan">
+                <a href="" class="pay pay1">Thêm vào giỏ hàng</a>
+                <a href="" class="pay pay2">Mua ngay</a>
+            </div>
+            <div class="product-des">
+                <h2>Nội dung sản phẩm
+                    <a href="" class="fa fa-plus"></a>
+                </h2>
+                <h2>Chính sách đổi trả
+                    <a href="" class="fa fa-plus"></a>
+                </h2>
+                <h2>Hướng dẫn bảo quản
+                    <a href="" class="fa fa-plus"></a>
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div id="HTCH">
+        <img src="./HTCH.png" alt="">
+        <div><a href="">Hệ thống cửa hàng</a></div>
+    </div>
+    <div id="footer">
+        <div class="left-footer">
+            <div class="line1">
+                <span class="fa fa-home"></span>
+                <ul>
+                    <li>Cơ sở 1: Số 1, Phạm Ngọc Thạch, Đống Đa, Hà Nội</li>
+                    <li>Cơ sở 2: Số 5, Nguyễn Trãi, Thanh Xuân, Hà Nội</li>
+                </ul>
+        
+            </div>
+            <div class="line2">
+                <p>
+                   <span class="fa fa-phone"></span>
+                   <p>0963.022.011</p>
+                </p>
+                <p>
+                <span class="fa fa-envelope"></span>
+                <p>manstore@gmail.com</p>
+                </p>
+            </div>
+        </div>
+        <div class="middle-footer">
+            <div class="line1">Chúng tôi ở đây</div>
+            <div class="line2">
+                <ul>
+                    <a href="">Giới thiệu</a>
+                    <a href="">Liên hệ hợp tác kinh doanh</a>
+                    <a href="">Tuyển dụng</a>
+                </ul>
+            </div>
+        </div>
+        <div class="right-footer">
+            <div class="line1">Theo dõi chúng tôi</div>
+            <div class="line2">
+                <a href="" class="fa fa-facebook"></a>
+                <a href="" class="fa fa-twitter"></a>
+            </div>
+            <div class="line3">
+                <a href="" class="fa fa-youtube-play" ></a>
+                <a href="" class="fa fa-instagram" ></a>
+            </div>     
+        </div>
+    </div>
+</body>
+</html>
+</body>
+</html>

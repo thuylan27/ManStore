@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng Man Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        :root{
+            --maincolor: #1C7947;
+            --navmenuheight: 65px;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            background:cornsilk;
+        }
+        body{
+            width: 1182px;
+            margin: 0 auto;
+        }
+        #navbar{
+            height: var(--navmenuheight);
+            background-color: var(--maincolor);
+        }
+        #navbar .logo{
+            float: left;
+            height: 65px ;
+            width: 210px;
+            display: block;
+        }
+        #navbar .logo a{
+            height: 30px;
+            width: 180px;
+            margin: 15px 30px;
+            float: left;
+            display: block;
+        }
+        #navbar .logo a img{
+            height: 100%;
+            width: 100%;
+        }
+        #navbar .search{
+            float: left;
+            width: 270px;
+            height: 33px;
+            background:cornsilk;
+            border-radius: 13px;
+            margin-left: 50px;
+            margin-top: 15px;
+        }
+        #navbar .search input{
+            font-weight: bold;
+            font-size: 13px;
+            background: none;
+            color: black;
+            margin-left: 10px;
+            margin-top: 8px;
+            border:none;
+            float: left;
+            width: 85%;
+            height: 50%;
+            display: block;
+        }
+        #navbar .search input:focus{
+            outline: none;
+        }
+        #navbar .search>a{
+            color:black;
+            font-size: 1.2rem;
+            display: block;
+            float: left;
+            margin-top: 6px;
+            text-decoration: none;
+            margin-left: 6px;
+        }
+        #navbar .box{
+            float: left;
+            width: 630px;
+            margin-left: 20px;
+            margin-top: 12px;
+            height: 42px;
+        }
+        #navbar .box>a{
+            
+            text-decoration: none;
+            position: relative;
+            height: 40px;
+            margin-left: 25px;
+            border-radius: 10px;
+        }
+        #navbar .box .box1{
+            float: left;
+            padding: 5px 5px;
+            align-items: center;
+            display: flex;
+        }
+        #navbar .box .box1:hover{
+            background:rgb(255, 255, 255, 0.1)
+        }
+        #navbar .box .box1 img{
+            width: 27px;
+            height: 27px;
+            float: left;
+            display: block;
+            margin-top: 3px;
+        }
+        #navbar .box .box1 .content1{
+            float: left;
+            color:white;
+            margin-left: 5px;
+            font-size: 13px;
+            line-height: 1.2;
+        }
+        #navbar .box .box1 .content1>p>strong{
+            font-size: 1rem;
+        }
+        #navbar .box .box2{
+            float: left;
+            padding: 5px;
+            align-items: center;
+            display: flex;
+        }
+        #navbar .box .box2:hover{
+            background:rgb(255, 255, 255, 0.1);
+        }
+        #navbar .box .box2 img{
+            width: 27px;
+            height: 27px;
+            float: left;
+            display: block;
+        }
+        #navbar .box .box2 .content2{
+            float: left;
+            color:white;
+            margin-left: 5px;
+            font-size: 13px;
+            line-height: 15px;
+        }
+        #navbar .box .box3{
+            float: left;
+            padding: 5px 5px;
+            align-items: center;
+            display: flex;
+        }
+        #navbar .box .box3:hover{
+            background:rgb(255, 255, 255, 0.1);
+        }
+        #navbar .box .box3 img{
+            width: 30px;
+            height: 30px;
+            float: left;
+        }
+        #navbar .box .box3 .content3{
+            float: left;
+            color:white;
+            margin-left: 5px;
+            font-size: 13px;
+        }
+        #navbar .box .box4{
+            float: left;
+            padding: 5px 5px;
+            align-items: center;
+            display: flex;
+        }
+        #navbar .box .box4:hover{
+            background:rgb(255, 255, 255, 0.1);
+        }
+        #navbar .box .box4 img{
+            width: 30px;
+            height: 30px;
+            float: left;
+        }
+        #navbar .box .box4 .content4{
+            float: left;
+            color:white;
+            margin-left: 5px;
+            font-size: 13px;
+            
+        }
+        #navbar .box .box5{
+            float: left;
+            text-align: center;
+            background:rgb(255, 255, 255, 0.1) ;
+            color: white;
+            font-size: 13px;
+            padding: 0 5px;
+            margin-right: 1px;
+        }
+        #navbar .box .box5 img{
+            width: 20px;
+            height: 20px;
+            padding-top: 2px;
+        }
+        #newsfeed{
+            height: 30px;
+            margin: 10px 0;
+        }
+        #newsfeed .running-text{
+            height: 100%;
+            width: 100%;
+            background-color: white ;
+            float: left;
+            overflow: hidden;
+        }
+        #newsfeed .running-text>ul{
+            list-style-type: none;
+            height: 100%;
+            position: relative;
+            white-space: nowrap;
+            line-height: 30px;
+            animation: runnings 120s infinite;
+            animation-timing-function: linear;
+        }
+        #newsfeed .running-text>ul:hover{
+            animation-play-state: paused;
+        }
+        @keyframes runnings {
+            0%{left:100%;}
+            100%{left:-10000px;}}
+        #newsfeed .running-text>ul>li{
+            display: inline-block;
+            font-weight: bold;
+            color: var(--maincolor);
+            font-size: 0.8rem;
+            margin-left: 40px;
+        }
+        #banmenu{
+            width: 100%;
+            background:cornsilk;
+            height:300px ;
+            float: left;
+        }
+        #banmenu .mainmenu{
+            width: 240px;
+            background-color: white;
+            float: left;
+            border-radius: 13px;
+        }
+        #banmenu .mainmenu>ul{
+            list-style-type: none;
+            margin:0;
+            padding: 0;
+        }
+        #banmenu .mainmenu>ul>li{
+            text-decoration: none;
+            align-items: center;
+            display: block;
+            padding: 0 10px;
+            height: 40px;
+            position: relative;
+        }
+        #banmenu .mainmenu>ul>li:hover{
+            background:#FFF8DC ;
+            animation: slide 1s;
+        }
+        @keyframes slide {
+            0%{left:8px;}
+            20%{left:-6.5px;}
+            40%{left:5px;}
+            60%{left:-3.5px;}
+            80%{left:2px;}
+            100%{left:0;}
+        }
+        #banmenu .mainmenu>ul>li>a{
+            width: 100%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+        }
+        #banmenu .mainmenu>ul>li>a img{
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+        }
+        #banmenu .mainmenu>ul>li>a span{
+            font-size: 13px;
+            font-weight: 700;
+            width: 170px;
+        }
+        #banmenu .mainmenu>ul>li>a>i{
+            float: right;
+            margin-left: 6px;
+            font-size: 13px;
+        }
+        #banmenu .mainmenu>ul>li>ul{
+            width: 100px;
+            height: 80px;
+            background-color: white;
+            position: absolute;
+            left: 240px;
+            top: 0;
+            border-radius: 13px;
+            text-align: left;
+            display: block;
+            z-index: 100;
+            font-weight: 700;
+            display: none;
+        }
+        #banmenu .mainmenu>ul>li:hover>ul{
+            display: block;
+        }
+        #banmenu .mainmenu>ul>li>ul>li{
+            list-style-type: none;
+            width: 100%;
+            height:40px;
+            padding: 0px 10px;
+        }
+        #banmenu .mainmenu>ul>li>ul>li:hover{
+            background:#FFF8DC ;
+            animation: slide 1s;
+            box-shadow: 1px;
+        }
+        @keyframes slide {
+            0%{left:8px;}
+            20%{left:-6.5px;}
+            40%{left:5px;}
+            60%{left:-3.5px;}
+            80%{left:2px;}
+            100%{left:0;}
+        }
+        #banmenu .mainmenu>ul>li>ul>li>a{
+            color: black;
+            text-decoration: none;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            height: 40px;
+            padding-left: 5px;
+        }
+        #banmenu .banner{
+            width: 927px;
+            height: 280px;
+            float: left;
+            margin-left: 10px;
+        }
+        #banmenu .banner .left-banner{
+            width: 672px;
+            height: 280px;
+            float: left;
+        }
+        #banmenu .banner .left-banner img{
+            width: 100%;
+            height: 100%;
+            border-radius: 13px;
+        }
+        #banmenu .banner .right-banner{
+            height: 100%;
+            width: 250px;
+            float: left;
+            margin-left: 5px;
+        }
+        #banmenu .banner .right-banner img{
+            height: 100%;
+            width: 100%;
+            border-radius: 13px;
+        }
+        #maincontent{
+            float: left;
+        }
+        #maincontent .first-content{
+            width: 1182px;
+            padding: 0;
+        }
+        #maincontent .first-content>h2{
+            text-transform: uppercase;
+        }
+        #maincontent .first-content .list-items{
+            height: 420px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #maincontent .first-content .list-items .item1{
+            height: 400px;
+            width: 285px;
+            text-align:center;
+            background-color: white;
+            border-radius: 13px;
+        }
+        #maincontent .first-content .list-items .item1:hover{
+            transform: scale(1.01);
+        }
+        #maincontent .first-content .list-items .item1 .item1-img img{
+            height: 285px;
+            width: 285px;
+            border-radius: 13px;
+        }
+        #maincontent .first-content .list-items .item1 .item1-name{
+            font-size: 18px;
+            display: block;
+        }
+        #maincontent .first-content .list-items .item1 .item1-price{
+            font-size: 18px;
+            font-weight: 800;
+        }
+        #maincontent .first-content .list-items .item1 .item1-rating{
+            margin-top: 10px;
+        }
+        .checked{
+            color: orange;
+        }
+        #maincontent .first-content .list-items .item2{
+            height: 400px;
+            width: 285px;
+            text-align:center;
+            background-color: white;
+            border-radius: 13px;
+        }
+        #maincontent .first-content .list-items .item2:hover{
+            transform: scale(1.01);
+        }
+        #maincontent .first-content .list-items .item2 .item2-img img{
+            height: 285px;
+            width: 285px;
+            border-radius: 13px;
+        }
+        #maincontent .first-content .list-items .item2 .item2-name{
+            font-size: 18px;
+            display: block;
+        }
+        #maincontent .first-content .list-items .item2 .item2-price{
+            font-size: 18px;
+            font-weight: 800;
+        }
+        #maincontent .first-content .list-items .item2 .item2-rating{
+            margin-top: 10px;
+        }
+        .checked{
+            color: orange;
+        }
+        #maincontent .first-content .list-items .item3{
+            height: 400px;
+            width: 285px;
+            text-align:center;
+            background-color: white;
+            border-radius: 13px;
+        }
+        #maincontent .first-content .list-items .item3:hover{
+            transform: scale(1.01);
+        }
+        #maincontent .first-content .list-items .item3 .item3-img img{
+            height: 285px;
+            width: 285px;
+            border-radius: 13px;
+        }
+        #maincontent .first-content .list-items .item3 .item3-name{
+            font-size: 18px;
+            display: block;
+        }
+        #maincontent .first-content .list-items .item3 .item3-price{
+            font-size: 18px;
+            font-weight: 800;
+        }
+        #maincontent .first-content .list-items .item3 .item3-rating{
+            margin-top: 10px;
+        }
+        .checked{
+            color: orange;
+        }
+        #maincontent .first-content .list-items .item4{
+            height: 400px;
+            width: 285px;
+            text-align:center;
+            background-color: white;
+            border-radius: 13px;
+        }
+        #maincontent .first-content .list-items .item4:hover{
+            transform: scale(1.01);
+        }
+        #maincontent .first-content .list-items .item4 .item4-img img{
+            height: 285px;
+            width: 285px;
+            border-radius: 13px;
+        }
+        #maincontent .first-content .list-items .item4 .item4-name{
+            font-size: 18px;
+            display: block;
+        }
+        #maincontent .first-content .list-items .item4 .item4-price{
+            font-size: 18px;
+            font-weight: 800;
+        }
+        #maincontent .first-content .list-items .item4 .item4-rating{
+            margin-top: 10px;
+        }
+        .checked{
+            color: orange;
+        }
+        #maincontent .second-content{
+            width: 1182px;
+            padding: 0;
+        }
+        #maincontent .second-content>h2{
+            text-transform: uppercase;
+        }
+        #maincontent .second-content .list-items{
+            height: 400px;
+            margin-top: 20px;
+            display: flex;
+            justify-content:space-between;
+        }
+        #maincontent .second-content .list-items .item5{
+            height: 400px;
+            width: 285px;
+            text-align:center;
+            background-color: white;
+            border-radius: 13px;
+            
+        }
+        #maincontent .second-content .list-items .item5:hover{
+            transform: scale(1.01);
+        }
+        #maincontent .second-content .list-items .item5 .item5-img img{
+            height: 285px;
+            width: 285px;
+            border-radius: 13px;
+        }
+        #maincontent .second-content .list-items .item5 .item5-name{
+            font-size: 18px;
+            display: block;
+        }
+        #maincontent .second-content .list-items .item5 .item5-price{
+            font-size: 18px;
+            font-weight: 800;
+        }
+        #maincontent .second-content .list-items .item5 .item5-rating{
+            margin-top: 10px;
+        }
+        .checked{
+            color: orange;
+        }#maincontent .second-content .list-items .item6{
+            height: 400px;
+            width: 285px;
+            text-align:center;
+            background-color: white;
+            border-radius: 13px;
+        
+        }
+        #maincontent .second-content .list-items .item6:hover{
+            transform: scale(1.01);
+        }
+        #maincontent .second-content .list-items .item6 .item6-img img{
+            height: 285px;
+            width: 285px;
+            border-radius: 13px;
+        }
+        #maincontent .second-content .list-items .item6 .item6-name{
+            font-size: 18px;
+            display: block;
+        }
+        #maincontent .second-content .list-items .item6 .item6-price{
+            font-size: 18px;
+            font-weight: 800;
+        }
+        #maincontent .second-content .list-items .item6 .item6-rating{
+            margin-top: 10px;
+        }
+        .checked{
+            color: orange;
+        }
+        #maincontent .second-content .list-items .item7{
+            height: 400px;
+            width: 285px;
+            text-align:center;
+            background-color: white;
+            border-radius: 13px;
+            
+        }
+        #maincontent .second-content .list-items .item7:hover{
+            transform: scale(1.01);
+        }
+        #maincontent .second-content .list-items .item7 .item7-img img{
+            height: 285px;
+            width: 285px;
+            border-radius: 13px;
+        }
+        #maincontent .second-content .list-items .item7 .item7-name{
+            font-size: 18px;
+            display: block;
+        }
+        #maincontent .second-content .list-items .item7 .item7-price{
+            font-size: 18px;
+            font-weight: 800;
+        }
+        #maincontent .second-content .list-items .item7 .item7-rating{
+            margin-top: 10px;
+        }
+        .checked{
+            color: orange;
+        }
+        #maincontent .second-content .list-items .item8{
+            height: 400px;
+            width: 285px;
+            text-align:center;
+            background-color: white;
+            border-radius: 13px;
+        }
+        #maincontent .second-content .list-items .item8:hover{
+            transform: scale(1.01);
+        }
+        #maincontent .second-content .list-items .item8 .item8-img img{
+            height: 285px;
+            width: 285px;
+            border-radius: 13px;
+        }
+        #maincontent .second-content .list-items .item8 .item8-name{
+            font-size: 18px;
+            display: block;
+        }
+        #maincontent .second-content .list-items .item8 .item8-price{
+            font-size: 18px;
+            font-weight: 800;
+        }
+        #maincontent .second-content .list-items .item8 .item8-rating{
+            margin-top: 10px;
+        }
+        .checked{
+            color: orange;
+        }
+        #HTCH{
+            width: 1182px;
+            height: 300px;
+            float: left;
+            background-color: green;
+            margin: 20px 0;
+            position: relative;
+            display:flex;
+            justify-content: center;
+        }
+        #HTCH img{
+            width: 1182px;
+            height: 100%;
+        }
+        #HTCH div{
+            position: absolute;
+            bottom: 150px;
+            border: 1px solid;
+            padding: 10px;
+            background: #474642;
+        }
+        #HTCH div:hover{
+            background: black;
+        }
+        #HTCH div a{
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #footer {
+            background-color: var(--maincolor);
+            float: left;
+            width: 100%;
+        }
+        #footer .left-footer{
+            margin: 10px 30px;
+            color: white;
+            float: left;
+        }
+        #footer .left-footer .line1{
+            margin: 10px 0;
+            display: inline-block;
+        }
+        #footer .left-footer .fa{
+            font-size: 1.3rem;
+            display: block;
+        }
+        #footer .left-footer .line1>ul{
+            list-style-type: none;
+            font-size: 15px;
+            margin-left: 10px;
+            display: inline-block;
+        }
+        #footer .left-footer .line2{
+            margin-bottom: 10px;
+        }
+        #footer .left-footer .line2>p{
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 15px;
+            justify-content: space-between;
+        }
+        #footer .middle-footer{
+            float: left;
+            color:white;
+            margin: 10px 15px;
+            margin-left: 180px;
+        }
+        #footer .middle-footer .line1{
+            margin: 10px 0;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #footer .middle-footer .line2>ul{
+            list-style-type: none;
+            font-size: 15px;
+        }
+        #footer .middle-footer .line2>ul>a{
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+        #footer .right-footer{
+            margin: 10px 15px;
+            color: white;
+            float: left;;
+            margin-left: 180px;
+        }
+        #footer .right-footer .line1{
+            margin: 10px 0;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #footer .right-footer .line2{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+            margin-bottom:10px;
+        }
+        #footer .right-footer .line2 a{
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+        #footer .right-footer .line3{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+            margin-bottom:10px;
+        }
+        #footer .right-footer .line3 a{
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div class="logo">
+            <a href=""><img src="./MH.png" alt=""></a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Bạn cần tìm gì?">
+            <a href="" class="fa fa-search"></a>
+        </div>
+        <div class="box">
+            <a class="box1" href="">
+                <img src="./Phone.png" alt="">
+                <div class="content1">
+                    <p>
+                        Gọi mua hàng
+                    <br>
+                    <strong>1800.1234</strong>
+                    </p>
+                </div>
+            </a>
+            <a href="" class="box2">
+                <img src="./place.png" alt="">
+                <div class="content2">
+                    <p>
+                        Cửa hàng
+                        <br>
+                        gần bạn
+                    </p>
+                </div>
+            </a>
+            <a href="" class="box3">
+                <img src="./deliver.png" alt="">
+                <div class="content3">
+                    <p>
+                        Tra cứu
+                        <br>
+                        đơn hàng
+                    </p>
+                </div>
+            </a>
+            <a href="" class="box4">
+                <img src="./giỏ hàng.png" alt="">
+                <div class="content4">
+                    <p>
+                        Giỏ
+                        <br>
+                        hàng
+                    </p>
+                </div>
+            </a>
+            <a href="" class="box5">
+                <img src="./user.png" alt="">
+                <p>Tài khoản</p>
+            </a>
+        </div>
+    </div>
+    <div id="newsfeed">
+        <div class="running-text"> 
+            <ul>
+                <li>Man Store chúng tôi không đơn thuần chỉ là cái đẹp thời trang, chúng tôi khao khát kiến tạo những giá trị xã hội nhân văn, trở thành một lối sống để đồng hành cùng với các bạn nam nơi công sở và học tập</li>
+                <li>Man Store là kênh mua sắm online uy tín hàng đầu, cùng với đội ngũ nhân viên chuyên nghiệp, chúng tôi cam kết đem những sản phẩm tốt nhất, với giá cả phải chăng uy tín và chất lượng với dịch vụ tốt nhất đến với mọi người</li>
+                <li>Tất cả những sản phẩm của chúng tôi được nhập về trên tiêu chí bền rẻ đẹp, cố gắng tốt nhất để làm hài lòng mọi người, trên phương diện gần gũi hơn nhưng vẫn giữ nguyên vẻ thanh lịch, tối giản và sang trọng</li>
+            </ul>
+        </div>
+
+        
+    </div>
+    <div id="banmenu">
+        <div class="mainmenu">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="./quan.png" alt="">
+                        <span>Quần nam</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </a>
+                    <ul class="list1">
+                            <li><a href="">Quần dài</a></li>
+                            <li><a href="">Quần short</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./shirt.png" alt="">
+                        <span>Áo nam</span>
+                        <i class="fa fa-chevron-right"></i>
+                    </a>
+                    <ul class="list1">
+                        <li><a href="">Áo sơ mi</a></li>
+                        <li><a href="">Áo thun</a></li>
+                    </ul>
+                   
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./shoes.png" alt="">
+                        <span>Giày dép nam</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./socks.png" alt="">
+                        <span>Tất/Vớ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./phu-kien.png" alt="">
+                        <span>Phụ kiện nam</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./khuyen-mai.png" alt="">
+                        <span>Khuyến mại</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./news.png" alt="">
+                        <span>Tin tức</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="banner">
+            <div class="left-banner">
+                <a href=""><img src="./shop-now.png" alt=""></a>
+            </div>
+            <div class="right-banner">
+            <a href=""> <img src="./new-pro.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="maincontent">
+        <div class="first-content">
+            <h2>Sản phẩm bán chạy</h2>
+            <div class="list-items">
+                <div class="item1">
+                    <div class="item1-img">
+                        <a href=""><img src="./ao-HN.jpg" alt=""></a>
+                    </div>
+                    <div class="item1-name">Áo Thun Hà Nội Man Store</div>
+                    <div class="item1-price"><p>350,000đ</p></div>
+                    <div class="item1-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span>Đã bán 1.5k</span>
+                    </div>
+                </div>
+                <div class="item2">
+                    <div class="item2-img">
+                        <a href="http://127.0.0.1:5500/CLOTHES%20STORE/AoThun.html"><img src="./ao-thun.jpg" alt=""></a>
+                    </div>
+                    <div class="item2-name">Áo Thun Basic Man Store</div>
+                    <div class="item2-price"><p>350,000đ</p></div>
+                    <div class="item2-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span>Đã bán 1k</span>
+                    </div>
+                </div>
+                <div class="item3">
+                    <div class="item3-img">
+                        <a href=""><img src="./polo-1.jpg" alt=""></a>
+                    </div>
+                    <div class="item3-name">Áo Thun Kẻ Viền Man Store</div>
+                    <div class="item3-price"><p>350,000đ</p></div>
+                    <div class="item3-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span>Đã bán 2k</span>
+                    </div>
+                </div>
+                <div class="item4">
+                    <div class="item4-img">
+                        <a href=""><img src="./quan.jpg" alt=""></a>
+                    </div>
+                    <div class="item4-name">Quần Âu Basic Man Store</div>
+                    <div class="item4-price"><p>350,000đ</p></div>
+                    <div class="item4-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span>Đã bán 2.5k</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second-content">
+            <h2>Sản phẩm mới</h2>
+            <div class="list-items">
+                <div class="item5">
+                    <div class="item5-img">
+                        <a href=""><img src="./item5.jpg" alt=""></a>
+                    </div>
+                    <div class="item5-name">Áo Sơ mi Kaki Man Store</div>
+                    <div class="item5-price"><p>350,000đ</p></div>
+                    <div class="item5-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span>Đã bán 100</span>
+                    </div>
+                </div>
+                <div class="item6">
+                    <div class="item6-img">
+                        <a href=""><img src="./item6.jpg" alt=""></a>
+                    </div>
+                    <div class="item6-name">Áo Sơ mi Kaki Man Store</div>
+                    <div class="item6-price"><p>350,000đ</p></div>
+                    <div class="item6-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span>Đã bán 150</span>
+                    </div>
+                </div>
+                <div class="item7">
+                    <div class="item7-img">
+                        <a href=""><img src="./item7.jpg" alt=""></a>
+                    </div>
+                    <div class="item7-name">Áo Sơ mi Kaki Man Store</div>
+                    <div class="item7-price"><p>350,000đ</p></div>
+                    <div class="item7-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span>Đã bán 200</span>
+                    </div>
+                </div>
+                <div class="item8">
+                    <div class="item8-img">
+                        <a href=""><img src="./item8.jpg" alt=""></a>
+                    </div>
+                    <div class="item8-name">Áo Sơ mi Kaki Man Store</div>
+                    <div class="item8-price"><p>350,000đ</p></div>
+                    <div class="item8-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span>Đã bán 250</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="HTCH">
+        <img src="./HTCH.png" alt="">
+        <div><a href="">Hệ thống cửa hàng</a></div>
+    </div>
+    <div id="footer">
+        <div class="left-footer">
+            <div class="line1">
+                <span class="fa fa-home"></span>
+                <ul>
+                    <li>Cơ sở 1: Số 1, Phạm Ngọc Thạch, Đống Đa, Hà Nội</li>
+                    <li>Cơ sở 2: Số 5, Nguyễn Trãi, Thanh Xuân, Hà Nội</li>
+                </ul>
+        
+            </div>
+            <div class="line2">
+                <p>
+                   <span class="fa fa-phone"></span>
+                   <p>0963.022.011</p>
+                </p>
+                <p>
+                <span class="fa fa-envelope"></span>
+                <p>manstore@gmail.com</p>
+                </p>
+            </div>
+        </div>
+        <div class="middle-footer">
+            <div class="line1">Chúng tôi ở đây</div>
+            <div class="line2">
+                <ul>
+                    <a href="">Giới thiệu</a>
+                    <a href="">Liên hệ hợp tác kinh doanh</a>
+                    <a href="">Tuyển dụng</a>
+                </ul>
+            </div>
+        </div>
+        <div class="right-footer">
+            <div class="line1">Theo dõi chúng tôi</div>
+            <div class="line2">
+                <a href="" class="fa fa-facebook"></a>
+                <a href="" class="fa fa-twitter"></a>
+            </div>
+            <div class="line3">
+                <a href="" class="fa fa-youtube-play" ></a>
+                <a href="" class="fa fa-instagram" ></a>
+            </div>     
+        </div>
+    </div>
+</body>
+</html>
